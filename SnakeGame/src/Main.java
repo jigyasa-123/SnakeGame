@@ -80,3 +80,21 @@ public class Main {
 * Termination Condition:
 *
 * */
+
+
+/*
+* Multithreaded snake game:
+* Different thread to run different tasks:
+* 1.Game Logic Thread
+* 2. Rendering Thread
+* 3. Input Listner
+*
+* Challenges:
+* 1. The Snake object, Food object, and the Board (or grid) are shared between the game logic and rendering threads. You must protect access to this shared state.
+* Use synchronized methods/blocks or java.util.concurrent locks (e.g., ReentrantLock) to ensure that only one thread modifies the game state at a time, and that the rendering thread gets a consistent snapshot.
+*
+*2. Inter-Thread Communication:
+* Game Logic -> Rendering : Use Object.wait()/notifyAll(), BlockingQueue
+* nput -> Game Logic : Use BlockingQueue<Direction> or a volatile
+ *
+* */
